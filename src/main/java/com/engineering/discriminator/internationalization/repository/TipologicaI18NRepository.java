@@ -8,5 +8,5 @@ import com.engineering.discriminator.internationalization.domain.TipologiaI18N;
 
 public interface TipologicaI18NRepository extends JpaRepository<TipologiaI18N, Long> {
 
-	Optional<TipologiaI18N> findByTipologiaCode(Long t);
+	Optional<TipologiaI18N> findByTipologiaCode(String code);
 }

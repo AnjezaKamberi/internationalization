@@ -10,6 +10,5 @@ import lombok.Data;
 public class Tipologia {
 
 	@Id
-	private Long code;
-	private String description;
+	private String code;
 }

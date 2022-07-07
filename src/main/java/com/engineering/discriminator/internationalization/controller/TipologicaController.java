@@ -19,7 +19,7 @@ public class TipologicaController {
 	private final TipologicaService tipologicaService;
 
 	@GetMapping("/{id}")
-	public ResponseEntity<TipologiaDTO> getTruckDataById(@PathVariable("id") Long tipologiaCode) {
+	public ResponseEntity<TipologiaDTO> getTruckDataById(@PathVariable("id") String tipologiaCode) {
 		return new ResponseEntity<>(tipologicaService.getTipologiaById(tipologiaCode), HttpStatus.OK);
 	}
 }

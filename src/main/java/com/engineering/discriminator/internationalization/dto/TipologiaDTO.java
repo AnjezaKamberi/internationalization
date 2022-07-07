@@ -8,6 +8,6 @@ import lombok.Setter;
 
 public class TipologiaDTO {
 
-	private Long code;
+	private String code;
 	private String description;
 }
