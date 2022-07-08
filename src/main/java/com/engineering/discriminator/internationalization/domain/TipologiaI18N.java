@@ -11,10 +11,14 @@ import org.hibernate.annotations.Filter;
 import org.hibernate.annotations.FilterDef;
 import org.hibernate.annotations.ParamDef;
 
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity(name = "tipologia_i18n")
-@Data
+@Getter
+@Setter
 @FilterDef(name = "languageFilter", parameters = { @ParamDef(name = "language", type = "string") })
 @Filter(name = "languageFilter", condition = "language = :language")
 public class TipologiaI18N {
@@ -27,6 +31,7 @@ public class TipologiaI18N {
 	@JoinColumn(name = "language")
 	private Language language;
 
+	@JsonBackReference
 	@ManyToOne
 	@JoinColumn(name = "tipologia_id")
 	private Tipologia tipologia;

@@ -5,8 +5,9 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class TipologiaDTO {
+public class DitaDTO {
 
-	private String code;
-	private String description;
+	private Long id;
+	private String name;
+	private TipologiaDTO tipologia;
 }
